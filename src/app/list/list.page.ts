@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./list.page.scss'],
 })
 export class ListPage implements OnInit {
+  persons:any;
 
 
   constructor(private http:HttpClient) {
@@ -20,6 +21,7 @@ export class ListPage implements OnInit {
   getList(){
     this.http.get('http://127.0.0.1:8000/api/person').subscribe((response) => {
       console.log(response['data']);
+      this.persons=response['data'];
     },error => {
       console.log(error);
     });

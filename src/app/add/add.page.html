@@ -4,6 +4,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content >
+  <ion-item>
+    <ion-label position="floating">Nom</ion-label>
+    <ion-input [(ngModel)]="nom" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">PreNom</ion-label>
+    <ion-input [(ngModel)]="prenom" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">phone</ion-label>
+    <ion-input [(ngModel)]="phone" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button color="primary" (click)="save()" expand="full" >Save</ion-button>
 </ion-content>
